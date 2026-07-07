@@ -1,3 +1,6 @@
+// If this script is bound to the target Google Sheet, leave SPREADSHEET_ID blank.
+// If this is a standalone Apps Script project, paste the target spreadsheet ID here
+// and make sure the deploying account has edit access to that spreadsheet.
 const SPREADSHEET_ID = "";
 const SHEET_NAME = "notify_signups";
 const HEADERS = ["timestamp", "email", "source", "pageUrl", "userAgent"];
