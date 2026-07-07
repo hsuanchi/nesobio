@@ -15,7 +15,7 @@
     />
     <meta
       property="og:image"
-      content="https://www.nesobio.com/static/260608_%EF%BC%88%E8%8B%B1%EF%BC%892026%20NESO%20BIO%20%E9%A0%81%E9%9D%A2_1-%E9%A6%96%E5%9C%96.png"
+      content="https://www.nesobio.com/static/0706/260703_%EF%BC%88%E8%8B%B1%EF%BC%892026%20NESO%20BIO%20%E9%A0%81%E9%9D%A2_0706_1-%E9%A6%96%E5%9C%96_%E8%8B%B1.png"
     />
     <meta property="og:type" content="website" />
     <link rel="icon" href="/favicon.ico" type="image/png" sizes="256x256" />
@@ -74,6 +74,194 @@
         height: auto;
       }
 
+      .hero-section {
+        position: relative;
+      }
+
+      .shop-now-hotspot,
+      .notify-hotspot {
+        position: absolute;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .shop-now-hotspot {
+        left: 36.5%;
+        top: 84.8%;
+        width: 27%;
+        height: 6.5%;
+      }
+
+      .notify-hotspot {
+        left: 11.5%;
+        top: 68%;
+        width: 77%;
+        height: 11%;
+      }
+
+      .shop-now-hotspot:focus-visible,
+      .notify-hotspot:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 4px;
+        box-shadow: 0 0 0 6px rgba(245, 48, 164, 0.75);
+      }
+
+      .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 30;
+        display: grid;
+        place-items: center;
+        padding: 22px;
+      }
+
+      .modal[hidden] {
+        display: none;
+      }
+
+      .modal__scrim {
+        position: absolute;
+        inset: 0;
+        background: rgba(16, 20, 31, 0.62);
+        backdrop-filter: blur(8px);
+      }
+
+      .modal__panel {
+        position: relative;
+        z-index: 1;
+        width: min(100%, 760px);
+      }
+
+      .modal__close {
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        z-index: 2;
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border: 0;
+        border-radius: 999px;
+        background: #171717;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+      }
+
+      .modal__close:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 3px;
+      }
+
+      .stock-card {
+        position: relative;
+        line-height: 0;
+      }
+
+      .stock-card img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .notify-card {
+        overflow: hidden;
+        border-radius: 26px;
+        background: #fff;
+        box-shadow: 0 24px 70px rgba(14, 20, 34, 0.28);
+      }
+
+      .notify-card__header {
+        padding: 42px 44px 26px;
+        border-bottom: 1px solid #f0edf3;
+      }
+
+      .notify-card__title {
+        margin: 0 0 12px;
+        color: #24242a;
+        font-size: 30px;
+        line-height: 1.15;
+        font-weight: 760;
+      }
+
+      .notify-card__helper {
+        margin: 0;
+        color: #686873;
+        font-size: 17px;
+        line-height: 1.55;
+      }
+
+      .notify-form {
+        display: grid;
+        gap: 16px;
+        padding: 30px 44px 42px;
+      }
+
+      .notify-form__label {
+        color: #34343b;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .notify-form__input {
+        width: 100%;
+        min-height: 54px;
+        border: 1px solid #ded9e2;
+        border-radius: 8px;
+        padding: 0 16px;
+        color: #202026;
+        font: inherit;
+      }
+
+      .notify-form__input:focus {
+        border-color: #f530a4;
+        outline: 3px solid rgba(245, 48, 164, 0.18);
+      }
+
+      .notify-form__button {
+        min-height: 56px;
+        border: 0;
+        border-radius: 999px;
+        background: #f530a4;
+        color: #fff;
+        font: inherit;
+        font-size: 18px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .notify-form__button:disabled {
+        cursor: wait;
+        opacity: 0.7;
+      }
+
+      .notify-form__status {
+        min-height: 24px;
+        margin: 0;
+        color: #686873;
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      .notify-form__status.is-error {
+        color: #b3261e;
+      }
+
+      .notify-form__status.is-success {
+        color: #146c43;
+      }
+
+      .honeypot {
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
       .top-link {
         position: fixed;
         right: max(16px, calc((100vw - 1200px) / 2 + 18px));
@@ -116,6 +304,35 @@
           width: 40px;
           height: 40px;
         }
+
+        .modal {
+          padding: 14px;
+        }
+
+        .modal__close {
+          top: 8px;
+          right: 8px;
+        }
+
+        .notify-card {
+          border-radius: 18px;
+        }
+
+        .notify-card__header {
+          padding: 30px 22px 20px;
+        }
+
+        .notify-card__title {
+          font-size: 24px;
+        }
+
+        .notify-card__helper {
+          font-size: 15px;
+        }
+
+        .notify-form {
+          padding: 24px 22px 30px;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -128,19 +345,25 @@
   <body>
     <h1 class="sr-only">NESO BIO</h1>
     <main id="top" class="page" aria-label="NESO BIO product page">
-      <figure class="section">
+      <figure class="section hero-section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_1-首圖.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_1-首圖_英.png"
           alt="NESO BIO hero product introduction"
           width="1200"
           height="1414"
           decoding="async"
           fetchpriority="high"
         />
+        <button
+          class="shop-now-hotspot"
+          type="button"
+          aria-label="Shop now"
+          data-open-stock
+        ></button>
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_2-好評數據_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_2-好評數據_英.png"
           alt="NESO BIO review data"
           width="1200"
           height="945"
@@ -150,7 +373,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_3-EGF_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_3-EGF_英.png"
           alt="EGF ingredient information"
           width="1200"
           height="1441"
@@ -160,7 +383,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_4-燕窩酸是什麼_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_4-燕窩酸是什麼_英.png"
           alt="What sialic acid is"
           width="1200"
           height="1517"
@@ -170,7 +393,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_5-燕窩酸適合對象_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_5-燕窩酸適合對象_英.png"
           alt="Who sialic acid is suitable for"
           width="1200"
           height="927"
@@ -180,7 +403,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_6-五大功效_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_6-五大功效_英.png"
           alt="Five key benefits"
           width="1200"
           height="1983"
@@ -190,7 +413,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_7-數據_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_7-數據_英.png"
           alt="Scientific data"
           width="1200"
           height="1623"
@@ -200,7 +423,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_8-1特殊功效（上）_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_8-1特殊功效（上）_英.png"
           alt="Special benefit introduction"
           width="1200"
           height="273"
@@ -210,7 +433,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_8-1特殊功效（中）_英.gif"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_8-1特殊功效（中）_英.gif"
           alt="Animated special benefit details"
           width="1200"
           height="500"
@@ -219,7 +442,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_8-1特殊功效（下）_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_8-1特殊功效（下）_英.png"
           alt="Special benefit details"
           width="1200"
           height="389"
@@ -229,7 +452,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_8-2特殊功效好評_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_8-2特殊功效好評_英.png"
           alt="Special benefit reviews"
           width="1200"
           height="625"
@@ -239,7 +462,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_9-適合搭配其他成分_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_9-適合搭配其他成分_英.png"
           alt="Ingredients suitable for pairing"
           width="1200"
           height="344"
@@ -249,7 +472,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_10-六大元素_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_10-六大元素_英.png"
           alt="Six core elements"
           width="1200"
           height="1093"
@@ -259,7 +482,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_11-世界發明大獎_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_11-世界發明大獎_英.png"
           alt="World invention award"
           width="1200"
           height="1252"
@@ -269,7 +492,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_12-作用說明小標_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_12-作用說明小標_英.png"
           alt="How sialic acid works"
           width="1200"
           height="285"
@@ -279,7 +502,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_13-燕窩酸作用說明_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_13-燕窩酸作用說明_英.png"
           alt="Sialic acid mechanism explanation"
           width="1200"
           height="1197"
@@ -289,7 +512,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_14-專利_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_14-專利_英.png"
           alt="Patent information"
           width="1200"
           height="1441"
@@ -299,7 +522,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_15-雙A認證_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_15-雙A認證_英.png"
           alt="Double A certification"
           width="1200"
           height="1073"
@@ -309,7 +532,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_16-1檢驗展示_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_16-1檢驗展示_英.png"
           alt="Testing and inspection display"
           width="1200"
           height="1601"
@@ -319,7 +542,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_16-2-檢驗展示CTA_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_16-2-檢驗展示CTA_英.png"
           alt="Testing display call to action"
           width="1200"
           height="209"
@@ -329,7 +552,7 @@
       </figure>
       <figure class="section">
         <img
-          src="static/260608_（英）2026 NESO BIO 頁面_17-年齡吃法_英.png"
+          src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_17-年齡吃法_英.png"
           alt="Usage guide by age"
           width="1200"
           height="1268"
@@ -346,5 +569,202 @@
         />
       </svg>
     </a>
+    <div
+      class="modal"
+      id="stock-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Temporarily out of stock"
+      hidden
+    >
+      <button
+        class="modal__scrim"
+        type="button"
+        aria-label="Close notification"
+        data-close-modal
+      ></button>
+      <div class="modal__panel">
+        <button class="modal__close" type="button" aria-label="Close" data-close-modal>
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+            <path
+              d="m6.7 5.3 5.3 5.3 5.3-5.3 1.4 1.4-5.3 5.3 5.3 5.3-1.4 1.4-5.3-5.3-5.3 5.3-1.4-1.4 5.3-5.3-5.3-5.3 1.4-1.4Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <div class="stock-card">
+          <img
+            src="static/0706/260703_（英）2026 NESO BIO 頁面_0706_pop-up.png"
+            alt="Temporarily out of stock. Notify me when available."
+            width="760"
+            height="681"
+            decoding="async"
+          />
+          <button
+            class="notify-hotspot"
+            type="button"
+            aria-label="Notify me when available"
+            data-open-notify
+          ></button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal"
+      id="notify-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="notify-title"
+      hidden
+    >
+      <button
+        class="modal__scrim"
+        type="button"
+        aria-label="Close notification form"
+        data-close-modal
+      ></button>
+      <div class="modal__panel">
+        <button class="modal__close" type="button" aria-label="Close" data-close-modal>
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+            <path
+              d="m6.7 5.3 5.3 5.3 5.3-5.3 1.4 1.4-5.3 5.3 5.3 5.3-1.4 1.4-5.3-5.3-5.3 5.3-1.4-1.4 5.3-5.3-5.3-5.3 1.4-1.4Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <section class="notify-card">
+          <header class="notify-card__header">
+            <h2 class="notify-card__title" id="notify-title">
+              Get notified when NESO BIO is available
+            </h2>
+            <p class="notify-card__helper">
+              Leave your email and we’ll let you know when it’s back in stock.
+            </p>
+          </header>
+          <form class="notify-form" id="notify-form">
+            <label class="notify-form__label" for="notify-email">Email address</label>
+            <input
+              class="notify-form__input"
+              id="notify-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              inputmode="email"
+              required
+              placeholder="you@example.com"
+            />
+            <label class="honeypot" for="notify-website">Website</label>
+            <input
+              class="honeypot"
+              id="notify-website"
+              name="website"
+              type="text"
+              tabindex="-1"
+              autocomplete="off"
+            />
+            <button class="notify-form__button" type="submit">Notify me</button>
+            <p class="notify-form__status" id="notify-status" aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script>
+      const NOTIFY_ENDPOINT = "";
+
+      const stockModal = document.querySelector("#stock-modal");
+      const notifyModal = document.querySelector("#notify-modal");
+      const notifyForm = document.querySelector("#notify-form");
+      const notifyEmail = document.querySelector("#notify-email");
+      const notifyStatus = document.querySelector("#notify-status");
+      let lastFocusedElement = null;
+
+      function openModal(modal, options = {}) {
+        if (!options.keepPreviousFocus) {
+          lastFocusedElement = document.activeElement;
+        }
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+        const firstControl = modal.querySelector(".modal__close, input, button");
+        firstControl?.focus();
+      }
+
+      function closeModals() {
+        stockModal.hidden = true;
+        notifyModal.hidden = true;
+        document.body.style.overflow = "";
+        if (lastFocusedElement instanceof HTMLElement) {
+          lastFocusedElement.focus();
+        }
+      }
+
+      function showStatus(message, type) {
+        notifyStatus.textContent = message;
+        notifyStatus.classList.toggle("is-error", type === "error");
+        notifyStatus.classList.toggle("is-success", type === "success");
+      }
+
+      document.querySelector("[data-open-stock]").addEventListener("click", () => {
+        openModal(stockModal);
+      });
+
+      document.querySelector("[data-open-notify]").addEventListener("click", () => {
+        stockModal.hidden = true;
+        openModal(notifyModal, { keepPreviousFocus: true });
+        showStatus("", "");
+      });
+
+      document.querySelectorAll("[data-close-modal]").forEach((control) => {
+        control.addEventListener("click", closeModals);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && (!stockModal.hidden || !notifyModal.hidden)) {
+          closeModals();
+        }
+      });
+
+      notifyForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        if (!notifyForm.reportValidity()) {
+          return;
+        }
+
+        if (!NOTIFY_ENDPOINT) {
+          showStatus("Signup is being prepared. Please try again later.", "error");
+          return;
+        }
+
+        const formData = new FormData(notifyForm);
+        if (formData.get("website")) {
+          showStatus("Thank you. We’ll notify you when it’s available.", "success");
+          notifyForm.reset();
+          return;
+        }
+
+        formData.append("source", "nesobio-out-of-stock");
+        formData.append("pageUrl", window.location.href);
+        formData.append("userAgent", navigator.userAgent);
+
+        const submitButton = notifyForm.querySelector("button[type='submit']");
+        submitButton.disabled = true;
+        showStatus("Submitting...", "");
+
+        try {
+          await fetch(NOTIFY_ENDPOINT, {
+            method: "POST",
+            mode: "no-cors",
+            body: formData,
+          });
+          showStatus("Thank you. We’ll notify you when it’s available.", "success");
+          notifyForm.reset();
+        } catch (error) {
+          showStatus("Something went wrong. Please try again later.", "error");
+        } finally {
+          submitButton.disabled = false;
+          notifyEmail.focus();
+        }
+      });
+    </script>
   </body>
 </html>
